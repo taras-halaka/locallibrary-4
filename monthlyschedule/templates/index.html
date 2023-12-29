@@ -6,7 +6,7 @@ Schedule
 {% endblock %}
 
 {% block content %}
-<h1>Поточний графік</h1>
+
   <p>Ласкаво просимо до <em>Планування чергувань</em>, додаток для управління чергуваннями відділу</p>
 <h2>Таблиця чергувань</h2>
 
@@ -44,11 +44,11 @@ Schedule
 <br/>
 <br/>
 <br/>
-  <p class="footer">
+  <div class="alert alert-dark" role="alert">
     You have visited this page   <i class="fa fa-fighter-jet" aria-hidden="true">  {{ num_visits }}  </i>
     {% if num_visits == 1 %}  time
     {%else %} 
     times{% endif %}.
-  </p>
+  </div>
 
 {% endblock %}
