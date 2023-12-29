@@ -1,0 +1,112 @@
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+  }
+/*   
+  https://codepen.io/Krishnaa_Gupta/pen/MWoRqmr */
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    height: 100vh;
+    width: 100vw;
+    background: #18191f;
+    color:aliceblue;
+
+  }
+  .container {
+    display:flex;
+    /* position: sticky; */
+    bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 60vw;
+  }
+  #fa-spinner{
+    font-size: 3em;
+  }
+  #fa-spinner,
+  #apple,
+  #twitter,
+  #github,
+  #facebook,
+  #linkedin {
+    font-size: 3em;
+    background-color: #18191f;
+    color: #fff;
+    box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
+      2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080,
+      inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080,
+      inset 2px 2px 10px #00000080;
+    border-radius: 29px;
+    padding: 11px 19px;
+    margin: 0 40px;
+    animation: animate 3s linear infinite;
+    text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
+      0 0 200px #0072ff;
+  }
+  #twitter {
+    animation-delay: 0.3s;
+  }
+  #facebook {
+    animation-delay: 0.7s;
+  }
+  #github {
+    animation-delay: 0.1s;
+  }
+  #fa-spinner{
+    animation-delay: 1.3s;
+  }
+
+  @keyframes animate {
+    from {
+      filter: hue-rotate(0deg);
+    }
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
+
+/* to highlight text in forms */
+/* styles.css */
+
+/* New style for the table */
+.table-preview {
+  border-collapse: collapse;
+  width: 90%;
+  color: #fff; /* Text color for table cells */
+}
+
+/* New style for table header */
+.table-preview th {
+  background-color: #2c2f3d; /* Header background color */
+  padding: 5px;
+  text-align: left;
+}
+
+/* New style for table data cells */
+.table-preview td {
+  border: 1px solid #3e4155; /* Border color for cells */
+  padding: 5px;
+  text-align: left;
+}
+
+/* Alternate row color */
+.table-preview tbody tr:nth-child(even) {
+  background-color: #363945; /* Alternate row background color */
+}
+
+
+.footer {
+  display:flex;
+  /* position: sticky; */
+  bottom: 50px;
+  justify-content: left;
+  align-items: left;
+  height: 50vh;
+  font-size:2em;
+}

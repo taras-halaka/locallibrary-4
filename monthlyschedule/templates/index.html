@@ -1,0 +1,54 @@
+{% extends "base_generic.html" %}
+{% block title %}
+<title>
+Schedule
+</title>
+{% endblock %}
+
+{% block content %}
+<h1>Поточний графік</h1>
+  <p>Ласкаво просимо до <em>Планування чергувань</em>, додаток для управління чергуваннями відділу</p>
+<h2>Таблиця чергувань</h2>
+
+<!-- Your table with added CSS class -->
+<table class="table-preview">
+  <thead>
+    <tr>
+      <th>  <p>черговий:</p> </th>
+      <!-- Replace 'start_date' and 'end_date' with your actual start and end dates -->
+      {% for date in date_range %}
+        <th>{{ date }}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for person in person_range %}
+      <tr>
+        <td>{{ person }}</td>
+                              {% for date in date_range %}
+                                                          <td>
+                                                            <!-- {{date}} -->
+                                                          </td>
+                              {% endfor %}
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<div class="alert alert-secondary" role="alert" style='padding:10px'>
+<!-- <div class="btn-group btn-group-lg" role="group" aria-label="Керування розкладом"> -->
+  <input type="button" class="btn btn-primary btn-lg" style='margin:10px'  id='bnt-reset' value="Спочатку" onclick="reset()"> 
+  <input type="button" class="btn btn-primary btn-lg" style='margin:10px'  id='bnt-auto' value="Автоматично" onclick="autoSchedule()"> 
+  <input type="button" class="btn btn-primary btn-lg" style='margin:10px'  id='bnt-save' value="Зберегти" onclick="save()"> 
+<!-- </div> -->
+  </div>
+<br/>
+<br/>
+<br/>
+  <p class="footer">
+    You have visited this page   <i class="fa fa-fighter-jet" aria-hidden="true">  {{ num_visits }}  </i>
+    {% if num_visits == 1 %}  time
+    {%else %} 
+    times{% endif %}.
+  </p>
+
+{% endblock %}

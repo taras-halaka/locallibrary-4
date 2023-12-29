@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block title %}
+    <title>Monthly Schedule Planner</title>
+    {% endblock %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    {% comment %}https://codepen.io/Krishnaa_Gupta/pen/MWoRqmr{% endcomment %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2">
+          {% block sidebar %}
+            <ul class="sidebar-nav">
+              <li>
+                <a href="{% url 'index' %}">Home</a>
+              </li>
+              <li>
+                <a href="{% url 'index' %}">TODO: Manage schedule</a>
+              </li>
+              <li>
+                <a href="{% url 'index' %}">TODO: Import results</a>
+              </li>
+              <li>
+                <a href="{% url 'index' %}">TODO: Export results</a>
+              </li>
+            </ul>
+          {% endblock %}
+        </div>
+        <div class="col-sm-10">
+          {% block content %}
+
+          <div> content block </div>
+          
+          {% endblock %}
+        </div>
+
+        
+        {% block pagination %}
+          {% if is_paginated %}
+            <div class="pagination">
+              <span class="page-links">
+                {% if page_obj.has_previous %}
+                  <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">previous</a>
+                {% endif %}
+                <span class="page-current">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</span>
+                {% if page_obj.has_next %}
+                  <a href="{{ request.path }}?page={{ page_obj.next_page_number }}">next</a>
+                {% endif %}
+              </span>
+            </div>
+          {% endif %}
+        {% endblock %}
+      </div>
+
+      <div class="container">
+        <!-- 
+        <i class="fa fa-spinner" id="fa-spinner"></i>
+        <i class="fa fa-apple" id="apple"></i>
+        <i class="fa fa-twitter" id="twitter"></i>
+        <i class="fa fa-github-square github" id="github"></i>
+        <i class="fa fa-facebook-square" id="facebook"></i>
+        <i class="fa fa-linkedin-square" id="linkedin"></i> 
+        -->
+      </div>
+
+      
+    </div>
+
+    
+  </body>
+</html>
