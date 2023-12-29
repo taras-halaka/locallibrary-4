@@ -2,6 +2,31 @@
 
 This is a template to get you started with Python on Replit. It's ready to go so you can just hit run and start coding!
 
+# Schedule planner web app
+
+ - the purpose is to automate dayli dutty schedule plan for group of persons
+ - export planned dates to Excel file (named table Excel)
+ - add abylity to rearange duties
+ - add statistics 
+ - add highlight to preview by date and person
+ - eport as Google or Outlook calendar .ics file to be able import 
+ - add summary notification as telegram bot message ( q: who? (who is dutty today); answ: list of persons and their role)
+
+![Application web site preview](/static/Readme/Preview.png "Preview")
+
+
+# ABOUT
+
+this it my pet project to get use to Django framework and python itself.
+
+## how to start
+
+   - pip install --requirement requirements.txt
+   - python manage.py migrate
+   - python manage.py runserver
+
+or try to reuse REPL.it~
+
 ## Running the repl
 
 1. Setup a new secret environment variable (the lock icon) where the key is `SECRET_KEY` and the value is
