@@ -27,6 +27,18 @@ this it my pet project to get use to Django framework and python itself.
 
 or try to reuse REPL.it~
 
+## USAGE FLOW
+
+it should be quite simple, as far as plan to reuse REPL.it hosting for demo.
+1. created REPL.it repostory
+2. publish source code to github public repository
+3. import github to local (Windows Subsytem Linux + VScode for Pytho)
+4. commit changes, push to Github, fetch or pull to REPL.it for online [preview](https://locallibrary-4.tarashalaka.repl.co/monthlyschedule/)
+
+the way it was done like this - I could not won fight with REPL.it when try to import Django project published on github, so I exported Django ready repl.it templete to be able run it in REPL.it WEB hosting.
+
+VSCOde extention to work directly with REPL.it was not tested by me, may be this will be much easier.
+
 ## Running the repl
 
 1. Setup a new secret environment variable (the lock icon) where the key is `SECRET_KEY` and the value is
